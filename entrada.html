@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BlogDeCafé</title>
-    <link rel="stylesheet" href="css/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100&family=Open+Sans&family=PT+Sans:wght@400;700&family=Staatliches&display=swap" crossorigin="crossorigin" as="font">
+    <link rel="preload" href="css/styles.css" as="style">
+
+    <link rel="stylesheet" href="css/normalize.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100&family=Open+Sans&family=PT+Sans:wght@400;700&family=Staatliches&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -32,7 +36,10 @@
     </header>
     <main class="contenedor">
         <h3 class="centrar-texto">Nuestros Próximos Cursos y Talleres</h3>
-        <img src="img/blog1.jpg" alt="Imagen Entrada Blog">
+        <picture>
+            <source loading="lazy" srcset="img/blog1.webp" type="image/webp">
+            <img loading="lazy" src="img/blog1.jpg" alt="Imagen Entrada Blog"><!--Una vez lleguemos al elemento de imagen ahí recien la descargas-->
+        </picture>
         <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid molestiae obcaecati officia a ipsa mollitia impedit cum rerum quos necessitatibus saepe tenetur, facilis velit voluptas, aspernatur libero, totam tempora fugiat.
         </p>
@@ -51,6 +58,6 @@
             </div>
         </div>
     </footer>
-    
+    <script src="js/modernizr.js"></script>
 </body>
 </html>
